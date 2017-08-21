@@ -3,5 +3,5 @@ node_modules/
 
 
 # dist stuff:
-/dist/*.js
-/dist/*.css
+/www/*.js
+/www/*.css
