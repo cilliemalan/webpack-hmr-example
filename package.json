@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.16",
+    "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.5.4",
     "webpack-dev-middleware": "^1.12.0"
