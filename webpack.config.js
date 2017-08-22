@@ -13,6 +13,14 @@ module.exports = {
             title: 'React from scratch'
         })
     ],
+    module: {
+        rules: [
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: ['file-loader']
+            }
+        ]
+    },
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, dist)
