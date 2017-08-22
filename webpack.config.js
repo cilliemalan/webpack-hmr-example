@@ -1,17 +1,22 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 const dist = path.resolve(__dirname, 'www');
 
 module.exports = {
-    entry: './client/index.js',
+    entry: {
+        app: ['./client/index.js', 'webpack-hot-middleware/client']
+    },
     devtool: 'inline-source-map',
     plugins: [
         new CleanWebpackPlugin([dist]),
         new HtmlWebpackPlugin({
             title: 'Hot Module Reload'
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin()
     ],
     module: {
         rules: [
