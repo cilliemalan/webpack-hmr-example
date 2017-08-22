@@ -6,7 +6,8 @@ const app = express();
 
 app.use(express.static('www'));
 
-const wpmw = webpackMiddleware(webpack(webpackconfig),{});
+const webpackCompiler = webpack(webpackconfig);
+const wpmw = webpackMiddleware(webpackCompiler,{});
 app.use(wpmw);
 
 app.listen(3000, () => {
