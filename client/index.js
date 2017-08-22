@@ -1,4 +1,5 @@
 import reactlogo from './content/react.svg';
+import './styles/main.scss';
 
 function component() {
     var element = document.createElement('div');
